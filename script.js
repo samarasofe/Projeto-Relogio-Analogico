@@ -1,3 +1,20 @@
 const PONTEIROHORA = document.querySelector("#hour");
 const PONTEIROMINUTO = document.querySelector("#minute");
 const PONTEIROSEGUNDO = document.querySelector("#second");
+
+var data = new Date();
+console.log(data);
+
+let hr = data.getHours();
+let min = data.getMinutes();
+let seg = data.getSeconds();
+
+console.log("Hora: " + hr + " Minuto: " + min + " Segundo: " + seg);
+
+let posicaoHr = 10;
+let posicaoMin = 90;
+let posicaoSeg = 330;
+
+PONTEIROHORA.style.transform = "rotate(" + posicaoHr + "deg)";
+PONTEIROMINUTO.style.transform = "rotate(" + posicaoMin + "deg)"
+PONTEIROSEGUNDO.style.transform = "rotate(" + posicaoSeg + "deg)"
