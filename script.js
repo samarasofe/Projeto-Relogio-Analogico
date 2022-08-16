@@ -11,9 +11,9 @@ let seg = data.getSeconds();
 
 console.log("Hora: " + hr + " Minuto: " + min + " Segundo: " + seg);
 
-let posicaoHr = 10;
-let posicaoMin = 90;
-let posicaoSeg = 330;
+let posicaoHr = (hr*360/12)+(min*(360/60)/12);
+let posicaoMin = (min*360/60)+(seg*(360/60)/60);
+let posicaoSeg = seg*360/60;
 
 PONTEIROHORA.style.transform = "rotate(" + posicaoHr + "deg)";
 PONTEIROMINUTO.style.transform = "rotate(" + posicaoMin + "deg)"
